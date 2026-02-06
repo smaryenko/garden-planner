@@ -1,0 +1,243 @@
+/* Global CSS styles for Garden Planner */
+
+/* Page background */
+body {
+  background-color: #e8ede0 !important;
+}
+
+/* TreeEditCard input styles */
+.tree-edit-input-horizontal {
+  background-color: rgba(250, 250, 250, 0.8);
+  border: 1px solid rgba(85, 107, 47, 0.2);
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 13px;
+  color: #2a2a2a;
+  width: 100px;
+  height: 28px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tree-edit-input-horizontal:hover {
+  border-color: rgba(85, 107, 47, 0.4);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.tree-edit-input-horizontal:focus {
+  border-color: #556b2f;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+  outline: none;
+}
+
+/* TreeEditCard select dropdown styles */
+.tree-edit-select {
+  background-color: rgba(250, 250, 250, 0.8);
+  border: 1px solid rgba(85, 107, 47, 0.2);
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 13px;
+  color: #2a2a2a;
+  width: 100px;
+  height: 28px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.tree-edit-select:hover {
+  border-color: rgba(85, 107, 47, 0.4);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.tree-edit-select:focus {
+  border-color: #556b2f;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+  outline: none;
+}
+
+/* Buy button hover effects */
+.buy-button-square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(85, 107, 47, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.buy-button-square:active {
+  transform: scale(0.95);
+}
+
+/* Tooltip container */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Item card in panel */
+.item-card-draggable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-card-dragging {
+  opacity: 0.3;
+}
+
+/* Garden card zoom container */
+.garden-zoom-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Touch drag preview */
+.touch-drag-preview {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.8;
+}
+
+/* Hidden drag image */
+.hidden-drag-image {
+  position: absolute;
+  left: -100px;
+  top: -100px;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.hidden-drag-image-img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/* Dropped item container */
+.dropped-item-container {
+  position: absolute;
+  z-index: 10;
+}
+
+.dropped-item-container-editing {
+  z-index: 20;
+}
+
+/* Dropped item inner */
+.dropped-item-inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  background-color: #e8ede0 !important;
+}
+
+/* Override React Native Web generated background color */
+.r-backgroundColor-c8f5pn {
+  background-color: #e8ede0 !important;
+}
+
+/* Language selector dropdown */
+.language-selector {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.language-selector:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.language-selector:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.language-selector option {
+  background-color: #556b2f;
+  color: white;
+  padding: 8px;
+}
+
+/* Tooltip arrow styles */
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #556b2f;
+}
+
+.tooltip-arrow-top {
+  top: auto;
+  bottom: 100%;
+  border-top: none;
+  border-bottom: 4px solid #556b2f;
+}
+
+/* Buy button tooltip wrapper */
+.buy-button-tooltip-wrapper {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+}
+
+.buy-button-tooltip-wrapper .tooltip-container {
+  position: relative;
+  display: block;
+}
+
+/* Photo button tooltip wrapper */
+.photo-button-tooltip-wrapper {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  z-index: 10;
+}
+
+.photo-button-tooltip-wrapper .tooltip-container {
+  position: relative;
+  display: block;
+}
+
+/* Photo button hover effects */
+.photo-button-square:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(85, 107, 47, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.photo-button-square:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Glassmorphism effects */
+
+/* TreeEditCard glassmorphism - applied via data attribute */
+[data-tree-card="true"] {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
